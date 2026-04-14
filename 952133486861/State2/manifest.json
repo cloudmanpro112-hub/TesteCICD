@@ -1,0 +1,28 @@
+{
+  "external_repositories": [],
+  "action": "plan",
+  "trigger_id": "1776169106892",
+  "backend_global_config": {
+    "provider": "aws",
+    "role_arn": "arn:aws:iam::952133486861:role/CloudMan-Gitops-cloudmanpro112-hub-TesteCICD",
+    "region": "us-east-1",
+    "bucket": "pro112-teste-cicd"
+  },
+  "pipeline_stages": [
+    {
+      "stage_name": "Manual Trigger: State2",
+      "parallel_execution": false,
+      "states": [
+        {
+          "path": "952133486861/State2",
+          "provider": "aws",
+          "target_auth": {
+            "role_arn": "arn:aws:iam::952133486861:role/CloudMan-Gitops-cloudmanpro112-hub-TesteCICD",
+            "region": "us-east-1",
+            "secret_name": "AUTH_AWS_952133486861"
+          }
+        }
+      ]
+    }
+  ]
+}
